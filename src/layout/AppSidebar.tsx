@@ -121,22 +121,22 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    name: "Activity",
+    name: "Aktivitas",
     icon: <Activity className="w-5 h-5" />,
     path: "/activity",
   },
   {
-    name: "Archive",
+    name: "Arsip",
     icon: <Archive className="w-5 h-5" />,
     path: "/archive",
   },
   {
-    name: "Report",
+    name: "Laporan",
     icon: <BarChart3 className="w-5 h-5" />,
     path: "/report",
   },
   {
-    name: "Settings",
+    name: "Pengaturan",
     icon: <Settings className="w-5 h-5" />,
     path: "/settings",
   },
