@@ -450,7 +450,7 @@ export default function KontrolDokumen() {
         </ComponentCard>
 
         {/* Key Points */}
-        <ComponentCard title="Poin-Poin Penting">
+        {/* <ComponentCard title="Poin-Poin Penting">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div className="flex items-start gap-3">
@@ -511,7 +511,7 @@ export default function KontrolDokumen() {
               </div>
             </div>
           </div>
-        </ComponentCard>
+        </ComponentCard> */}
       </div>
     </>
   );
