@@ -30,6 +30,10 @@ import AuditInternal from "./pages/ProsedurSOP/ISO9001/AuditInternal";
 import KontrolDokumen from "./pages/ProsedurSOP/ISO9001/KontrolDokumen";
 import KontrolRekaman from "./pages/ProsedurSOP/ISO9001/KontrolRekaman";
 import TindakanKorektif from "./pages/ProsedurSOP/ISO9001/TindakanKorektif";
+import TinjauanManajemen from "./pages/ProsedurSOP/ISO9001/TinjauanManajemen";
+import TopManajemen from "./pages/ProsedurSOP/ProsedurDept/TopManajemen";
+import HRGA from "./pages/ProsedurSOP/ProsedurDept/HRGA";
+import FinanceAccounting from "./pages/ProsedurSOP/ProsedurDept/FinanceAccounting";
 
 export default function App() {
   return (
@@ -104,6 +108,26 @@ export default function App() {
               index
               path="/prosedur/iso9001/tindakan-korektif"
               element={<TindakanKorektif />}
+            />
+            <Route
+              index
+              path="/prosedur/iso9001/tinjauan-manajemen"
+              element={<TinjauanManajemen />}
+            />
+
+            {/* Prosedur Departemen */}
+            <Route
+              index
+              path="/prosedur/departemen/top-manajemen"
+              element={<TopManajemen />}
+            />
+
+            <Route index path="/prosedur/departemen/hrga" element={<HRGA />} />
+
+            <Route
+              index
+              path="/prosedur/departemen/finance-accounting"
+              element={<FinanceAccounting />}
             />
 
             {/* Others Page */}

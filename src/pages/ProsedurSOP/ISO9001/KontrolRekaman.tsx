@@ -331,7 +331,7 @@ export default function KontrolRekaman() {
         </ComponentCard>
 
         {/* Retention Policy */}
-        <ComponentCard title="Kebijakan Masa Retensi">
+        {/* <ComponentCard title="Kebijakan Masa Retensi">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border-l-4 border-purple-500">
               <h4 className="font-semibold text-purple-900 dark:text-purple-300 mb-2">
@@ -417,7 +417,7 @@ export default function KontrolRekaman() {
               </ul>
             </div>
           </div>
-        </ComponentCard>
+        </ComponentCard> */}
 
         {/* Storage Guidelines */}
         <ComponentCard title="Panduan Penyimpanan">
