@@ -18,6 +18,18 @@ import Blank from "./pages/Blank";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
+import VisiMisi from "./pages/DokumenStrategis/VisiMisi";
+import KebijakanMutu from "./pages/DokumenStrategis/KebijakanMutu";
+import ManualMutu from "./pages/DokumenStrategis/ManualMutu";
+import SasaranMutu from "./pages/DokumenStrategis/SasaranMutu";
+import StrukturOrganisasi from "./pages/DokumenStrategis/StrukturOrganisasi";
+import KonteksOrganisasi from "./pages/DokumenStrategis/KonteksOrganisasi";
+import KebijakanK3 from "./pages/DokumenStrategis/KebijakanK3";
+import KebijakanLingkungan from "./pages/DokumenStrategis/KebijakanLingkungan";
+import AuditInternal from "./pages/ProsedurSOP/ISO9001/AuditInternal";
+import KontrolDokumen from "./pages/ProsedurSOP/ISO9001/KontrolDokumen";
+import KontrolRekaman from "./pages/ProsedurSOP/ISO9001/KontrolRekaman";
+import TindakanKorektif from "./pages/ProsedurSOP/ISO9001/TindakanKorektif";
 
 export default function App() {
   return (
@@ -28,6 +40,71 @@ export default function App() {
           {/* Dashboard Layout */}
           <Route element={<AppLayout />}>
             <Route index path="/" element={<Home />} />
+
+            {/* Dokumen Strategis */}
+            <Route
+              index
+              path="/dokumen-strategis/visi-misi"
+              element={<VisiMisi />}
+            />
+            <Route
+              index
+              path="/dokumen-strategis/kebijakan-mutu"
+              element={<KebijakanMutu />}
+            />
+            <Route
+              index
+              path="/dokumen-strategis/manual-mutu"
+              element={<ManualMutu />}
+            />
+            <Route
+              index
+              path="/dokumen-strategis/sasaran-mutu"
+              element={<SasaranMutu />}
+            />
+            <Route
+              index
+              path="/dokumen-strategis/struktur-organisasi"
+              element={<StrukturOrganisasi />}
+            />
+            <Route
+              index
+              path="/dokumen-strategis/konteks-organisasi"
+              element={<KonteksOrganisasi />}
+            />
+            <Route
+              index
+              path="/dokumen-strategis/kebijakan-k3"
+              element={<KebijakanK3 />}
+            />
+            <Route
+              index
+              path="/dokumen-strategis/kebijakan-lingkungan"
+              element={<KebijakanLingkungan />}
+            />
+
+            {/* ProsedurSOP */}
+            {/* ISO 9001 */}
+            <Route
+              index
+              path="/prosedur/iso9001/kontrol-dokumen"
+              element={<KontrolDokumen />}
+            />
+            <Route
+              index
+              path="/prosedur/iso9001/kontrol-rekaman"
+              element={<KontrolRekaman />}
+            />
+            <Route
+              index
+              path="/prosedur/iso9001/audit-internal"
+              element={<AuditInternal />}
+            />
+            <Route
+              index
+              path="/prosedur/iso9001/tindakan-korektif"
+              element={<TindakanKorektif />}
+            />
 
             {/* Others Page */}
             <Route path="/profile" element={<UserProfiles />} />
