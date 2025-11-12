@@ -3,7 +3,7 @@ import PageBreadcrumb from "../../../components/common/PageBreadCrumb";
 import PageMeta from "../../../components/common/PageMeta";
 import ComponentCard from "../../../components/common/ComponentCard";
 import {
-  Users,
+//   Users,
   Download,
   Eye,
   Briefcase,
@@ -97,7 +97,7 @@ export default function HRGA() {
     },
   ]);
 
-  const getStatusBadge = (status: string) => {
+  const getStatusBadge = (_status: string) => {
     return (
       <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800">
         Active
