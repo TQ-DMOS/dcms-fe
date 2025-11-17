@@ -34,7 +34,6 @@ export default function AllDocuments() {
   const [selectedType, setSelectedType] = useState("all");
   const [selectedDept, setSelectedDept] = useState("all");
   const [selectedStatus, setSelectedStatus] = useState("all");
-  const [dateRange, setDateRange] = useState({ from: "", to: "" });
 
   const [documents] = useState<Document[]>([
     {
@@ -152,7 +151,6 @@ export default function AllDocuments() {
     setSelectedType("all");
     setSelectedDept("all");
     setSelectedStatus("all");
-    setDateRange({ from: "", to: "" });
   };
 
   return (
