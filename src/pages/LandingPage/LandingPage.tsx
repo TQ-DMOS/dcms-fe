@@ -1,18 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  FileText,
-  Shield,
-  Users,
-  Zap,
-  CheckCircle,
-  Menu,
-  X,
-  ChevronRight,
-  Building2,
-  Target,
-  Eye,
-  Award,
-} from "lucide-react";
+import { useState, useEffect } from "react";
+import { FileText, Menu, X, Target, Eye, Award } from "lucide-react";
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,9 +17,9 @@ const LandingPage = () => {
     window.location.href = "/signin";
   };
 
-  const handleDashboardClick = () => {
-    window.location.href = "/dashboard";
-  };
+  // const handleDashboardClick = () => {
+  //   window.location.href = "/dashboard";
+  // };
 
   return (
     <div className="min-h-screen bg-white">
