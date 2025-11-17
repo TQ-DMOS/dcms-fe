@@ -34,6 +34,7 @@ import TinjauanManajemen from "./pages/ProsedurSOP/ISO9001/TinjauanManajemen";
 import TopManajemen from "./pages/ProsedurSOP/ProsedurDept/TopManajemen";
 import HRGA from "./pages/ProsedurSOP/ProsedurDept/HRGA";
 import FinanceAccounting from "./pages/ProsedurSOP/ProsedurDept/FinanceAccounting";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 export default function App() {
   return (
@@ -41,91 +42,80 @@ export default function App() {
       <Router>
         <ScrollToTop />
         <Routes>
-          {/* Dashboard Layout */}
+          {/* Landing Page - Public Route */}
+          <Route path="/" element={<LandingPage />} />
+
+          {/* Auth Routes - Public */}
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+
+          {/* Dashboard Layout - Protected Routes */}
           <Route element={<AppLayout />}>
-            <Route index path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Home />} />
 
             {/* Dokumen Strategis */}
             <Route
-              index
               path="/dokumen-strategis/visi-misi"
               element={<VisiMisi />}
             />
             <Route
-              index
               path="/dokumen-strategis/kebijakan-mutu"
               element={<KebijakanMutu />}
             />
             <Route
-              index
               path="/dokumen-strategis/manual-mutu"
               element={<ManualMutu />}
             />
             <Route
-              index
               path="/dokumen-strategis/sasaran-mutu"
               element={<SasaranMutu />}
             />
             <Route
-              index
               path="/dokumen-strategis/struktur-organisasi"
               element={<StrukturOrganisasi />}
             />
             <Route
-              index
               path="/dokumen-strategis/konteks-organisasi"
               element={<KonteksOrganisasi />}
             />
             <Route
-              index
               path="/dokumen-strategis/kebijakan-k3"
               element={<KebijakanK3 />}
             />
             <Route
-              index
               path="/dokumen-strategis/kebijakan-lingkungan"
               element={<KebijakanLingkungan />}
             />
 
-            {/* ProsedurSOP */}
-            {/* ISO 9001 */}
+            {/* ProsedurSOP - ISO 9001 */}
             <Route
-              index
               path="/prosedur/iso9001/kontrol-dokumen"
               element={<KontrolDokumen />}
             />
             <Route
-              index
               path="/prosedur/iso9001/kontrol-rekaman"
               element={<KontrolRekaman />}
             />
             <Route
-              index
               path="/prosedur/iso9001/audit-internal"
               element={<AuditInternal />}
             />
             <Route
-              index
               path="/prosedur/iso9001/tindakan-korektif"
               element={<TindakanKorektif />}
             />
             <Route
-              index
               path="/prosedur/iso9001/tinjauan-manajemen"
               element={<TinjauanManajemen />}
             />
 
             {/* Prosedur Departemen */}
             <Route
-              index
               path="/prosedur/departemen/top-manajemen"
               element={<TopManajemen />}
             />
-
-            <Route index path="/prosedur/departemen/hrga" element={<HRGA />} />
-
+            <Route path="/prosedur/departemen/hrga" element={<HRGA />} />
             <Route
-              index
               path="/prosedur/departemen/finance-accounting"
               element={<FinanceAccounting />}
             />
@@ -153,10 +143,6 @@ export default function App() {
             <Route path="/line-chart" element={<LineChart />} />
             <Route path="/bar-chart" element={<BarChart />} />
           </Route>
-
-          {/* Auth Layout */}
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
 
           {/* Fallback Route */}
           <Route path="*" element={<NotFound />} />

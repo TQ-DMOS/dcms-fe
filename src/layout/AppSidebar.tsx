@@ -37,22 +37,44 @@ const navItems: NavItem[] = [
     name: "Dokumen Strategis",
     icon: <FileText className="w-5 h-5" />,
     subItems: [
-      { name: "Visi & Misi Perusahaan", path: "/dokumen-strategis/visi-misi" },
-      { name: "Kebijakan Mutu", path: "/dokumen-strategis/kebijakan-mutu" },
-      { name: "Manual Mutu", path: "/dokumen-strategis/manual-mutu" },
-      { name: "Sasaran Mutu", path: "/dokumen-strategis/sasaran-mutu" },
-      {
-        name: "Struktur Organisasi",
-        path: "/dokumen-strategis/struktur-organisasi",
+      // Klausul 4 - Context of the Organization
+      { 
+        name: "Konteks Organisasi", 
+        path: "/dokumen-strategis/konteks-organisasi" 
       },
-      {
-        name: "Konteks Organisasi",
-        path: "/dokumen-strategis/konteks-organisasi",
+      
+      // Klausul 5 - Leadership
+      { 
+        name: "Visi & Misi Perusahaan", 
+        path: "/dokumen-strategis/visi-misi" 
       },
-      { name: "Kebijakan K3", path: "/dokumen-strategis/kebijakan-k3" },
+      { 
+        name: "Kebijakan Mutu", 
+        path: "/dokumen-strategis/kebijakan-mutu" 
+      },
+      { 
+        name: "Kebijakan K3", 
+        path: "/dokumen-strategis/kebijakan-k3" 
+      },
       {
         name: "Kebijakan Lingkungan",
         path: "/dokumen-strategis/kebijakan-lingkungan",
+      },
+      { 
+        name: "Struktur Organisasi", 
+        path: "/dokumen-strategis/struktur-organisasi" 
+      },
+      
+      // Klausul 6 - Planning
+      { 
+        name: "Sasaran Mutu", 
+        path: "/dokumen-strategis/sasaran-mutu" 
+      },
+      
+      // Klausul 7 - Support (Manual Mutu mencakup semua klausul)
+      { 
+        name: "Manual Mutu", 
+        path: "/dokumen-strategis/manual-mutu" 
       },
     ],
   },
@@ -60,11 +82,15 @@ const navItems: NavItem[] = [
     name: "Dokumen Operasional",
     icon: <Folder className="w-5 h-5" />,
     subItems: [
+      // Klausul 7.5 - Documented Information
       {
         name: "Stock Opname Report",
         path: "/dokumen-operasional/stock-opname",
       },
-      { name: "User Access List", path: "/dokumen-operasional/user-access" },
+      { 
+        name: "User Access List", 
+        path: "/dokumen-operasional/user-access" 
+      },
       {
         name: "Backup & Recovery Policy",
         path: "/dokumen-operasional/backup-policy",
@@ -79,6 +105,7 @@ const navItems: NavItem[] = [
         name: "Prosedur Wajib ISO 9001",
         path: "#",
         subItems: [
+          // Klausul 7.5.3 - Control of documented information
           {
             name: "Kontrol Dokumen",
             path: "/prosedur/iso9001/kontrol-dokumen",
@@ -87,14 +114,23 @@ const navItems: NavItem[] = [
             name: "Kontrol Rekaman",
             path: "/prosedur/iso9001/kontrol-rekaman",
           },
-          { name: "Audit Internal", path: "/prosedur/iso9001/audit-internal" },
-          {
-            name: "Tindakan Korektif",
-            path: "/prosedur/iso9001/tindakan-korektif",
+          
+          // Klausul 9.2 - Internal audit
+          { 
+            name: "Audit Internal", 
+            path: "/prosedur/iso9001/audit-internal" 
           },
+          
+          // Klausul 9.3 - Management review
           {
             name: "Tinjauan Manajemen",
             path: "/prosedur/iso9001/tinjauan-manajemen",
+          },
+          
+          // Klausul 10.2 - Nonconformity and corrective action
+          {
+            name: "Tindakan Korektif",
+            path: "/prosedur/iso9001/tindakan-korektif",
           },
         ],
       },
@@ -102,19 +138,37 @@ const navItems: NavItem[] = [
         name: "Prosedur Per-departemen",
         path: "#",
         subItems: [
-          { name: "Top Manajemen", path: "/prosedur/departemen/top-manajemen" },
-          { name: "HRGA", path: "/prosedur/departemen/hrga" },
+          { 
+            name: "Top Manajemen", 
+            path: "/prosedur/departemen/top-manajemen" 
+          },
+          { 
+            name: "HRGA", 
+            path: "/prosedur/departemen/hrga" 
+          },
           {
             name: "Finance & Accounting",
             path: "/prosedur/departemen/finance-accounting",
           },
           {
-            name: "Tindakan Korektif",
-            path: "/prosedur/departemen/tindakan-korektif",
+            name: "Procurement",
+            path: "/prosedur/departemen/procurement",
           },
           {
-            name: "Tinjauan Manajemen",
-            path: "/prosedur/departemen/tinjauan-manajemen",
+            name: "Sales",
+            path: "/prosedur/departemen/sales",
+          },
+          {
+            name: "Operations",
+            path: "/prosedur/departemen/operations",
+          },
+          {
+            name: "Warehouse",
+            path: "/prosedur/departemen/warehouse",
+          },
+          {
+            name: "IT",
+            path: "/prosedur/departemen/it",
           },
         ],
       },
