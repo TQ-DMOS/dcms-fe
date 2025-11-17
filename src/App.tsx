@@ -35,6 +35,11 @@ import TopManajemen from "./pages/ProsedurSOP/ProsedurDept/TopManajemen";
 import HRGA from "./pages/ProsedurSOP/ProsedurDept/HRGA";
 import FinanceAccounting from "./pages/ProsedurSOP/ProsedurDept/FinanceAccounting";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import AllDocuments from "./pages/Dokumen/AllDocuments";
+import MemahamiOrganisasi from "./pages/ISO9001/MemahamiOrganisasi";
+import PihakBerkepentingan from "./pages/ISO9001/PihakBerkepentingan";
+import RuangLingkup from "./pages/ISO9001/RuangLingkup";
+import SistemManajemenMutu from "./pages/ISO9001/SistemManajemenMutu";
 
 export default function App() {
   return (
@@ -53,11 +58,30 @@ export default function App() {
           <Route element={<AppLayout />}>
             <Route path="/dashboard" element={<Home />} />
 
-            {/* Dokumen Strategis */}
+            {/* Dokumen */}
+            <Route path="/dokumen/all" element={<AllDocuments />} />
+
+            {/* ISO 9001:2015 */}
+            {/* Konteks Organisasi */}
             <Route
-              path="/dokumen-strategis/visi-misi"
-              element={<VisiMisi />}
+              path="/iso/klausul-4/memahami-organisasi"
+              element={<MemahamiOrganisasi />}
             />
+            <Route
+              path="/iso/klausul-4/pihak-berkepentingan"
+              element={<PihakBerkepentingan />}
+            />
+            <Route
+              path="/iso/klausul-4/ruang-lingkup"
+              element={<RuangLingkup />}
+            />
+            <Route
+              path="/iso/klausul-4/sistem-manajemen-mutu"
+              element={<SistemManajemenMutu />}
+            />
+
+            {/* Dokumen Strategis */}
+            <Route path="/dokumen-strategis/visi-misi" element={<VisiMisi />} />
             <Route
               path="/dokumen-strategis/kebijakan-mutu"
               element={<KebijakanMutu />}

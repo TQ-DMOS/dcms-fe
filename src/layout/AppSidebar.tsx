@@ -3,10 +3,11 @@ import { Link, useLocation } from "react-router";
 import {
   LayoutDashboard,
   FileText,
-  Folder,
   Layers,
-  Activity,
-  Archive,
+  Building2,
+  Target,
+  AlertTriangle,
+  ClipboardCheck,
   BarChart3,
   Settings,
   ChevronDown,
@@ -28,171 +29,357 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
+  // Dashboard
   {
     name: "Dashboard",
     icon: <LayoutDashboard className="w-5 h-5" />,
-    path: "/",
+    path: "/dashboard",
   },
+
+  // Dokumen - Semua Dokumen dengan Filter
   {
-    name: "Dokumen Strategis",
+    name: "Dokumen",
     icon: <FileText className="w-5 h-5" />,
-    subItems: [
-      // Klausul 4 - Context of the Organization
-      { 
-        name: "Konteks Organisasi", 
-        path: "/dokumen-strategis/konteks-organisasi" 
-      },
-      
-      // Klausul 5 - Leadership
-      { 
-        name: "Visi & Misi Perusahaan", 
-        path: "/dokumen-strategis/visi-misi" 
-      },
-      { 
-        name: "Kebijakan Mutu", 
-        path: "/dokumen-strategis/kebijakan-mutu" 
-      },
-      { 
-        name: "Kebijakan K3", 
-        path: "/dokumen-strategis/kebijakan-k3" 
-      },
-      {
-        name: "Kebijakan Lingkungan",
-        path: "/dokumen-strategis/kebijakan-lingkungan",
-      },
-      { 
-        name: "Struktur Organisasi", 
-        path: "/dokumen-strategis/struktur-organisasi" 
-      },
-      
-      // Klausul 6 - Planning
-      { 
-        name: "Sasaran Mutu", 
-        path: "/dokumen-strategis/sasaran-mutu" 
-      },
-      
-      // Klausul 7 - Support (Manual Mutu mencakup semua klausul)
-      { 
-        name: "Manual Mutu", 
-        path: "/dokumen-strategis/manual-mutu" 
-      },
-    ],
+    path: "/dokumen/all",
   },
+
+  // ISO 9001:2015 - Klausul ISO (Urut sesuai Klausul)
   {
-    name: "Dokumen Operasional",
-    icon: <Folder className="w-5 h-5" />,
-    subItems: [
-      // Klausul 7.5 - Documented Information
-      {
-        name: "Stock Opname Report",
-        path: "/dokumen-operasional/stock-opname",
-      },
-      { 
-        name: "User Access List", 
-        path: "/dokumen-operasional/user-access" 
-      },
-      {
-        name: "Backup & Recovery Policy",
-        path: "/dokumen-operasional/backup-policy",
-      },
-    ],
-  },
-  {
-    name: "Prosedur & SOP",
+    name: "ISO 9001:2015",
     icon: <Layers className="w-5 h-5" />,
     subItems: [
+      // Klausul 4 - Konteks Organisasi
       {
-        name: "Prosedur Wajib ISO 9001",
+        name: "4. Konteks Organisasi",
         path: "#",
         subItems: [
-          // Klausul 7.5.3 - Control of documented information
           {
-            name: "Kontrol Dokumen",
-            path: "/prosedur/iso9001/kontrol-dokumen",
+            name: "4.1 Memahami Organisasi & Konteksnya",
+            path: "/iso/klausul-4/memahami-organisasi",
           },
           {
-            name: "Kontrol Rekaman",
-            path: "/prosedur/iso9001/kontrol-rekaman",
+            name: "4.2 Kebutuhan Pihak Berkepentingan",
+            path: "/iso/klausul-4/pihak-berkepentingan",
           },
-          
-          // Klausul 9.2 - Internal audit
-          { 
-            name: "Audit Internal", 
-            path: "/prosedur/iso9001/audit-internal" 
-          },
-          
-          // Klausul 9.3 - Management review
           {
-            name: "Tinjauan Manajemen",
-            path: "/prosedur/iso9001/tinjauan-manajemen",
+            name: "4.3 Ruang Lingkup SMM",
+            path: "/iso/klausul-4/ruang-lingkup",
           },
-          
-          // Klausul 10.2 - Nonconformity and corrective action
           {
-            name: "Tindakan Korektif",
-            path: "/prosedur/iso9001/tindakan-korektif",
+            name: "4.4 Sistem Manajemen Mutu",
+            path: "/iso/klausul-4/sistem-manajemen-mutu",
           },
         ],
       },
+
+      // Klausul 5 - Kepemimpinan
       {
-        name: "Prosedur Per-departemen",
+        name: "5. Kepemimpinan",
         path: "#",
         subItems: [
-          { 
-            name: "Top Manajemen", 
-            path: "/prosedur/departemen/top-manajemen" 
-          },
-          { 
-            name: "HRGA", 
-            path: "/prosedur/departemen/hrga" 
+          {
+            name: "5.1 Kepemimpinan & Komitmen",
+            path: "/iso/klausul-5/kepemimpinan-komitmen",
           },
           {
-            name: "Finance & Accounting",
-            path: "/prosedur/departemen/finance-accounting",
+            name: "5.2 Kebijakan Mutu",
+            path: "/iso/klausul-5/kebijakan-mutu",
           },
           {
-            name: "Procurement",
-            path: "/prosedur/departemen/procurement",
-          },
-          {
-            name: "Sales",
-            path: "/prosedur/departemen/sales",
-          },
-          {
-            name: "Operations",
-            path: "/prosedur/departemen/operations",
-          },
-          {
-            name: "Warehouse",
-            path: "/prosedur/departemen/warehouse",
-          },
-          {
-            name: "IT",
-            path: "/prosedur/departemen/it",
+            name: "5.3 Peran & Tanggung Jawab",
+            path: "/iso/klausul-5/peran-tanggung-jawab",
           },
         ],
+      },
+
+      // Klausul 6 - Perencanaan
+      {
+        name: "6. Perencanaan",
+        path: "#",
+        subItems: [
+          {
+            name: "6.1 Tindakan Risiko & Peluang",
+            path: "/iso/klausul-6/risiko-peluang",
+          },
+          {
+            name: "6.2 Sasaran Mutu & Rencana",
+            path: "/iso/klausul-6/sasaran-mutu",
+          },
+          {
+            name: "6.3 Perencanaan Perubahan",
+            path: "/iso/klausul-6/perencanaan-perubahan",
+          },
+        ],
+      },
+
+      // Klausul 7 - Dukungan
+      {
+        name: "7. Dukungan",
+        path: "#",
+        subItems: [
+          {
+            name: "7.1 Sumber Daya",
+            path: "/iso/klausul-7/sumber-daya",
+          },
+          {
+            name: "7.2 Kompetensi",
+            path: "/iso/klausul-7/kompetensi",
+          },
+          {
+            name: "7.3 Kepedulian",
+            path: "/iso/klausul-7/kepedulian",
+          },
+          {
+            name: "7.4 Komunikasi",
+            path: "/iso/klausul-7/komunikasi",
+          },
+          {
+            name: "7.5 Informasi Terdokumentasi",
+            path: "/iso/klausul-7/informasi-terdokumentasi",
+          },
+        ],
+      },
+
+      // Klausul 8 - Operasi
+      {
+        name: "8. Operasi",
+        path: "#",
+        subItems: [
+          {
+            name: "8.1 Perencanaan Operasional",
+            path: "/iso/klausul-8/perencanaan-operasional",
+          },
+          {
+            name: "8.2 Persyaratan Produk/Jasa",
+            path: "/iso/klausul-8/persyaratan-produk",
+          },
+          {
+            name: "8.3 Desain & Pengembangan",
+            path: "/iso/klausul-8/desain-pengembangan",
+          },
+          {
+            name: "8.4 Pengendalian Proses Eksternal",
+            path: "/iso/klausul-8/proses-eksternal",
+          },
+          {
+            name: "8.5 Produksi & Penyediaan Jasa",
+            path: "/iso/klausul-8/produksi-jasa",
+          },
+          {
+            name: "8.6 Pelepasan Produk/Jasa",
+            path: "/iso/klausul-8/pelepasan-produk",
+          },
+          {
+            name: "8.7 Pengendalian Output Tidak Sesuai",
+            path: "/iso/klausul-8/output-tidak-sesuai",
+          },
+        ],
+      },
+
+      // Klausul 9 - Evaluasi Kinerja
+      {
+        name: "9. Evaluasi Kinerja",
+        path: "#",
+        subItems: [
+          {
+            name: "9.1 Pemantauan, Pengukuran, Analisis",
+            path: "/iso/klausul-9/pemantauan-pengukuran",
+          },
+          {
+            name: "9.2 Audit Internal",
+            path: "/iso/klausul-9/audit-internal",
+          },
+          {
+            name: "9.3 Tinjauan Manajemen",
+            path: "/iso/klausul-9/tinjauan-manajemen",
+          },
+        ],
+      },
+
+      // Klausul 10 - Peningkatan
+      {
+        name: "10. Peningkatan",
+        path: "#",
+        subItems: [
+          {
+            name: "10.1 Umum",
+            path: "/iso/klausul-10/umum",
+          },
+          {
+            name: "10.2 Ketidaksesuaian & Tindakan Korektif",
+            path: "/iso/klausul-10/tindakan-korektif",
+          },
+          {
+            name: "10.3 Peningkatan Berkelanjutan",
+            path: "/iso/klausul-10/peningkatan-berkelanjutan",
+          },
+        ],
+      },
+
+      // Panduan ISO
+      {
+        name: "Panduan ISO",
+        path: "/iso/panduan",
       },
     ],
   },
+
+  // Organisasi
   {
-    name: "Aktivitas",
-    icon: <Activity className="w-5 h-5" />,
-    path: "/activity",
+    name: "Organisasi",
+    icon: <Building2 className="w-5 h-5" />,
+    subItems: [
+      {
+        name: "Struktur Organisasi",
+        path: "#",
+        subItems: [
+          {
+            name: "Struktur Umum",
+            path: "/organisasi/struktur/umum",
+          },
+          {
+            name: "Detail per Departemen",
+            path: "/organisasi/struktur/departemen",
+          },
+        ],
+      },
+      {
+        name: "Job Description",
+        path: "/organisasi/job-description",
+      },
+      {
+        name: "Data Karyawan",
+        path: "/organisasi/karyawan",
+      },
+    ],
   },
+
+  // Sasaran Mutu
   {
-    name: "Arsip",
-    icon: <Archive className="w-5 h-5" />,
-    path: "/archive",
+    name: "Sasaran Mutu",
+    icon: <Target className="w-5 h-5" />,
+    subItems: [
+      {
+        name: "Dashboard Sasaran Mutu",
+        path: "/sasaran-mutu/dashboard",
+      },
+      {
+        name: "Target Tahunan",
+        path: "/sasaran-mutu/target-tahunan",
+      },
+      {
+        name: "Pencapaian Bulanan",
+        path: "/sasaran-mutu/pencapaian-bulanan",
+      },
+      {
+        name: "Laporan",
+        path: "/sasaran-mutu/laporan",
+      },
+    ],
   },
+
+  // Risiko & Peluang
+  {
+    name: "Risiko & Peluang",
+    icon: <AlertTriangle className="w-5 h-5" />,
+    subItems: [
+      {
+        name: "Daftar Risiko & Peluang",
+        path: "/risiko-peluang/daftar",
+      },
+      {
+        name: "Tambah Baru",
+        path: "/risiko-peluang/tambah",
+      },
+      {
+        name: "Analisis Risiko",
+        path: "/risiko-peluang/analisis",
+      },
+      {
+        name: "Laporan Konsolidasi",
+        path: "/risiko-peluang/laporan",
+      },
+    ],
+  },
+
+  // Audit & Log
+  {
+    name: "Audit & Log",
+    icon: <ClipboardCheck className="w-5 h-5" />,
+    subItems: [
+      {
+        name: "Audit Internal",
+        path: "/audit/internal",
+      },
+      {
+        name: "Temuan Audit",
+        path: "/audit/temuan",
+      },
+      {
+        name: "Audit Log System",
+        path: "/audit/log-system",
+      },
+      {
+        name: "Laporan Audit",
+        path: "/audit/laporan",
+      },
+    ],
+  },
+
+  // Laporan
   {
     name: "Laporan",
     icon: <BarChart3 className="w-5 h-5" />,
-    path: "/report",
+    subItems: [
+      {
+        name: "Laporan Departemen",
+        path: "/laporan/departemen",
+      },
+      {
+        name: "Laporan Sasaran Mutu",
+        path: "/laporan/sasaran-mutu",
+      },
+      {
+        name: "Laporan Dokumen",
+        path: "/laporan/dokumen",
+      },
+      {
+        name: "Business Model Process",
+        path: "/laporan/business-model",
+      },
+      {
+        name: "Export Data",
+        path: "/laporan/export",
+      },
+    ],
   },
+
+  // Pengaturan
   {
     name: "Pengaturan",
     icon: <Settings className="w-5 h-5" />,
-    path: "/settings",
+    subItems: [
+      {
+        name: "Profil Saya",
+        path: "/pengaturan/profil",
+      },
+      {
+        name: "Manajemen User",
+        path: "/pengaturan/user",
+      },
+      {
+        name: "Manajemen Departemen",
+        path: "/pengaturan/departemen",
+      },
+      {
+        name: "Role & Permission",
+        path: "/pengaturan/role-permission",
+      },
+      {
+        name: "Pengaturan Sistem",
+        path: "/pengaturan/sistem",
+      },
+    ],
   },
 ];
 
