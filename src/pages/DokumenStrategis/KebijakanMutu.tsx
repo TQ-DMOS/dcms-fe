@@ -23,7 +23,7 @@ interface Document {
   fileSize: string;
 }
 
-export default function KebijakanMutu() {
+export default function KebijakanMutuOld() {
   const [documents] = useState<Document[]>([
     {
       id: "1",

@@ -9,9 +9,9 @@ import {
   Edit,
   Plus,
 } from "lucide-react";
-import PageMeta from "../../components/common/PageMeta";
-import PageBreadcrumb from "../../components/common/PageBreadCrumb";
-import ComponentCard from "../../components/common/ComponentCard";
+import PageMeta from "../../../components/common/PageMeta";
+import PageBreadcrumb from "../../../components/common/PageBreadCrumb";
+import ComponentCard from "../../../components/common/ComponentCard";
 
 interface ExternalIssue {
   id: string;
@@ -163,50 +163,50 @@ export default function MemahamiOrganisasi() {
     }
   };
 
-  const getSWOTColor = (type: string) => {
-    switch (type) {
-      case "strength":
-        return "bg-green-50 dark:bg-green-900/20 border-green-500";
-      case "weakness":
-        return "bg-yellow-50 dark:bg-yellow-900/20 border-yellow-500";
-      case "opportunity":
-        return "bg-blue-50 dark:bg-blue-900/20 border-blue-500";
-      case "threat":
-        return "bg-red-50 dark:bg-red-900/20 border-red-500";
-      default:
-        return "bg-gray-50 dark:bg-gray-800 border-gray-500";
-    }
-  };
+  // const getSWOTColor = (type: string) => {
+  //   switch (type) {
+  //     case "strength":
+  //       return "bg-green-50 dark:bg-green-900/20 border-green-500";
+  //     case "weakness":
+  //       return "bg-yellow-50 dark:bg-yellow-900/20 border-yellow-500";
+  //     case "opportunity":
+  //       return "bg-blue-50 dark:bg-blue-900/20 border-blue-500";
+  //     case "threat":
+  //       return "bg-red-50 dark:bg-red-900/20 border-red-500";
+  //     default:
+  //       return "bg-gray-50 dark:bg-gray-800 border-gray-500";
+  //   }
+  // };
 
-  const getSWOTIcon = (type: string) => {
-    switch (type) {
-      case "strength":
-        return <TrendingUp className="w-5 h-5 text-green-600" />;
-      case "weakness":
-        return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
-      case "opportunity":
-        return <Target className="w-5 h-5 text-blue-600" />;
-      case "threat":
-        return <AlertTriangle className="w-5 h-5 text-red-600" />;
-      default:
-        return null;
-    }
-  };
+  // const getSWOTIcon = (type: string) => {
+  //   switch (type) {
+  //     case "strength":
+  //       return <TrendingUp className="w-5 h-5 text-green-600" />;
+  //     case "weakness":
+  //       return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
+  //     case "opportunity":
+  //       return <Target className="w-5 h-5 text-blue-600" />;
+  //     case "threat":
+  //       return <AlertTriangle className="w-5 h-5 text-red-600" />;
+  //     default:
+  //       return null;
+  //   }
+  // };
 
-  const getSWOTTitle = (type: string) => {
-    switch (type) {
-      case "strength":
-        return "Kekuatan (Strengths)";
-      case "weakness":
-        return "Kelemahan (Weaknesses)";
-      case "opportunity":
-        return "Peluang (Opportunities)";
-      case "threat":
-        return "Ancaman (Threats)";
-      default:
-        return "";
-    }
-  };
+  // const getSWOTTitle = (type: string) => {
+  //   switch (type) {
+  //     case "strength":
+  //       return "Kekuatan (Strengths)";
+  //     case "weakness":
+  //       return "Kelemahan (Weaknesses)";
+  //     case "opportunity":
+  //       return "Peluang (Opportunities)";
+  //     case "threat":
+  //       return "Ancaman (Threats)";
+  //     default:
+  //       return "";
+  //   }
+  // };
 
   return (
     <>
@@ -233,7 +233,7 @@ export default function MemahamiOrganisasi() {
 
         {/* Statistics */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -247,7 +247,7 @@ export default function MemahamiOrganisasi() {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -261,7 +261,7 @@ export default function MemahamiOrganisasi() {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -275,7 +275,7 @@ export default function MemahamiOrganisasi() {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -435,7 +435,7 @@ export default function MemahamiOrganisasi() {
         </ComponentCard>
 
         {/* SWOT Analysis */}
-        <ComponentCard title="Analisis SWOT">
+        {/* <ComponentCard title="Analisis SWOT">
           <div className="grid md:grid-cols-2 gap-4">
             {["strength", "weakness", "opportunity", "threat"].map((type) => {
               const items = swotItems.filter((item) => item.type === type);
@@ -476,7 +476,7 @@ export default function MemahamiOrganisasi() {
               );
             })}
           </div>
-        </ComponentCard>
+        </ComponentCard> */}
 
         {/* Document Info */}
         <ComponentCard title="Informasi Dokumen">

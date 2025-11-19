@@ -19,7 +19,7 @@ import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
 import VisiMisi from "./pages/DokumenStrategis/VisiMisi";
-import KebijakanMutu from "./pages/DokumenStrategis/KebijakanMutu";
+import KebijakanMutuOld from "./pages/DokumenStrategis/KebijakanMutu";
 import ManualMutu from "./pages/DokumenStrategis/ManualMutu";
 import SasaranMutu from "./pages/DokumenStrategis/SasaranMutu";
 import StrukturOrganisasi from "./pages/DokumenStrategis/StrukturOrganisasi";
@@ -36,10 +36,20 @@ import HRGA from "./pages/ProsedurSOP/ProsedurDept/HRGA";
 import FinanceAccounting from "./pages/ProsedurSOP/ProsedurDept/FinanceAccounting";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import AllDocuments from "./pages/Dokumen/AllDocuments";
-import MemahamiOrganisasi from "./pages/ISO9001/MemahamiOrganisasi";
-import PihakBerkepentingan from "./pages/ISO9001/PihakBerkepentingan";
-import RuangLingkup from "./pages/ISO9001/RuangLingkup";
-import SistemManajemenMutu from "./pages/ISO9001/SistemManajemenMutu";
+import MemahamiOrganisasi from "./pages/ISO9001/KonteksOrganisasi/MemahamiOrganisasi";
+import PihakBerkepentingan from "./pages/ISO9001/KonteksOrganisasi/PihakBerkepentingan";
+import RuangLingkup from "./pages/ISO9001/KonteksOrganisasi/RuangLingkup";
+import SistemManajemenMutu from "./pages/ISO9001/KonteksOrganisasi/SistemManajemenMutu";
+import KepemimpinanKomitmen from "./pages/ISO9001/Kepemimpinan/KepemimpinanKomitmen";
+import KebijakanMutu from "./pages/ISO9001/Kepemimpinan/KebijakanMutu";
+import PeranTanggungJawab from "./pages/ISO9001/Kepemimpinan/PeranTanggungJawab";
+import TindakanRisikoPeluang from "./pages/ISO9001/Perencanaan/TindakanRisikoPeluang";
+import SasaranMutuRencana from "./pages/ISO9001/Perencanaan/SasaranMutuRencana";
+import PerencanaanPerubahan from "./pages/ISO9001/Perencanaan/PerencanaanPerubahan";
+import SumberDaya from "./pages/ISO9001/Dukungan/SumberDaya";
+import Kompetensi from "./pages/ISO9001/Dukungan/Kompetensi";
+import Kesadaran from "./pages/ISO9001/Dukungan/Kesadaran";
+import InformasiTerdokumentasi from "./pages/ISO9001/Dukungan/InformasiTerdokumentasi";
 
 export default function App() {
   return (
@@ -80,11 +90,57 @@ export default function App() {
               element={<SistemManajemenMutu />}
             />
 
+            {/* Kepemimpinan */}
+            <Route
+              path="/iso/klausul-5/kepemimpinan-komitmen"
+              element={<KepemimpinanKomitmen />}
+            />
+            <Route
+              path="/iso/klausul-5/kebijakan-mutu"
+              element={<KebijakanMutu />}
+            />
+            <Route
+              path="/iso/klausul-5/peran-tanggung-jawab"
+              element={<PeranTanggungJawab />}
+            />
+
+            {/* Perencanaan */}
+            <Route
+              path="/iso/klausul-6/risiko-peluang"
+              element={<TindakanRisikoPeluang />}
+            />
+            <Route
+              path="/iso/klausul-6/sasaran-mutu"
+              element={<SasaranMutuRencana />}
+            />
+            <Route
+              path="/iso/klausul-6/perencanaan-perubahan"
+              element={<PerencanaanPerubahan />}
+            />
+
+            {/* Dukungan */}
+            <Route path="/iso/klausul-7/sumber-daya" element={<SumberDaya />} />
+            <Route path="/iso/klausul-7/kompetensi" element={<Kompetensi />} />
+            <Route path="/iso/klausul-7/kesadaran" element={<Kesadaran />} />
+            <Route
+              path="/iso/klausul-7/informasi-terdokumentasi"
+              element={<InformasiTerdokumentasi />}
+            />
+
+            {/* Operasi */}
+
+            {/* Evaluasi Kerja */}
+
+            {/* Peningkatan */}
+
+            {/* Panduan ISO */}
+
             {/* Dokumen Strategis */}
+
             <Route path="/dokumen-strategis/visi-misi" element={<VisiMisi />} />
             <Route
               path="/dokumen-strategis/kebijakan-mutu"
-              element={<KebijakanMutu />}
+              element={<KebijakanMutuOld />}
             />
             <Route
               path="/dokumen-strategis/manual-mutu"

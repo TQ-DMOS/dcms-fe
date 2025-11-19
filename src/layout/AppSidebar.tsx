@@ -126,8 +126,8 @@ const navItems: NavItem[] = [
             path: "/iso/klausul-7/kompetensi",
           },
           {
-            name: "7.3 Kepedulian",
-            path: "/iso/klausul-7/kepedulian",
+            name: "7.3 Kesadaran",
+            path: "/iso/klausul-7/kesadaran",
           },
           {
             name: "7.4 Komunikasi",

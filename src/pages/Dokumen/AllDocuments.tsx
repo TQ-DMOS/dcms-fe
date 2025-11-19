@@ -163,16 +163,6 @@ export default function AllDocuments() {
       />
       <PageBreadcrumb pageTitle="All Documents" />
       <div className="space-y-6">
-        {/* Header */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Semua Dokumen
-          </h2>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-            Kelola dan akses semua dokumen dalam sistem DCMS
-          </p>
-        </div>
-
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
@@ -185,7 +175,9 @@ export default function AllDocuments() {
                   {documents.length}
                 </p>
               </div>
-              <FileText className="w-8 h-8 text-brand-500" />
+              <div className="w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+                <FileText className="w-5 h-5 text-brand-500" />
+              </div>
             </div>
           </div>
 

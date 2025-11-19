@@ -1,13 +1,7 @@
-import PageBreadcrumb from "../../components/common/PageBreadCrumb";
-import PageMeta from "../../components/common/PageMeta";
-import ComponentCard from "../../components/common/ComponentCard";
-import {
-  Download,
-  Upload,
-  CheckCircle,
-  XCircle,
-  FileText,
-} from "lucide-react";
+import PageBreadcrumb from "../../../components/common/PageBreadCrumb";
+import PageMeta from "../../../components/common/PageMeta";
+import ComponentCard from "../../../components/common/ComponentCard";
+import { Download, Upload, CheckCircle, XCircle, FileText } from "lucide-react";
 
 export default function RuangLingkup() {
   return (
@@ -34,7 +28,7 @@ export default function RuangLingkup() {
         </div>
 
         {/* Scope Statement */}
-        <ComponentCard title="Pernyataan Ruang Lingkup">
+        {/* <ComponentCard title="Pernyataan Ruang Lingkup">
           <div className="bg-brand-50 dark:bg-brand-900/20 border-l-4 border-brand-500 p-6 rounded-lg">
             <h3 className="text-xl font-bold text-brand-700 dark:text-brand-400 mb-4">
               RUANG LINGKUP SISTEM MANAJEMEN MUTU
@@ -49,7 +43,7 @@ export default function RuangLingkup() {
               </p>
             </div>
           </div>
-        </ComponentCard>
+        </ComponentCard> */}
 
         {/* Included Activities */}
         <ComponentCard title="Aktivitas yang Tercakup dalam Ruang Lingkup">
