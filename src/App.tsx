@@ -23,7 +23,7 @@ import KebijakanMutuOld from "./pages/DokumenStrategis/KebijakanMutu";
 import ManualMutu from "./pages/DokumenStrategis/ManualMutu";
 import SasaranMutu from "./pages/DokumenStrategis/SasaranMutu";
 import StrukturOrganisasi from "./pages/DokumenStrategis/StrukturOrganisasi";
-import KonteksOrganisasi from "./pages/DokumenStrategis/KonteksOrganisasi";
+import KonteksOrganisasi from "./pages/ISO9001/KonteksOrganisasi/KonteksOrganisasi";
 import KebijakanK3 from "./pages/DokumenStrategis/KebijakanK3";
 import KebijakanLingkungan from "./pages/DokumenStrategis/KebijakanLingkungan";
 import AuditInternal from "./pages/ProsedurSOP/ISO9001/AuditInternal";
@@ -88,6 +88,10 @@ export default function App() {
             <Route
               path="/iso/klausul-4/sistem-manajemen-mutu"
               element={<SistemManajemenMutu />}
+            />
+            <Route
+              path="/iso/klausul-4/konteks-organisasi"
+              element={<KonteksOrganisasi />}
             />
 
             {/* Kepemimpinan */}

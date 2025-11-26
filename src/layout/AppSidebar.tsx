@@ -54,19 +54,23 @@ const navItems: NavItem[] = [
         path: "#",
         subItems: [
           {
-            name: "4.1 Memahami Organisasi & Konteksnya",
-            path: "/iso/klausul-4/memahami-organisasi",
+            name: "Konteks Organisasi",
+            path: "/iso/klausul-4/konteks-organisasi",
           },
+          // {
+          //   name: "4.1 Memahami Organisasi & Konteksnya",
+          //   path: "/iso/klausul-4/memahami-organisasi",
+          // },
+          // {
+          //   name: "4.2 Kebutuhan Pihak Berkepentingan",
+          //   path: "/iso/klausul-4/pihak-berkepentingan",
+          // },
+          // {
+          //   name: "4.3 Ruang Lingkup SMM",
+          //   path: "/iso/klausul-4/ruang-lingkup",
+          // },
           {
-            name: "4.2 Kebutuhan Pihak Berkepentingan",
-            path: "/iso/klausul-4/pihak-berkepentingan",
-          },
-          {
-            name: "4.3 Ruang Lingkup SMM",
-            path: "/iso/klausul-4/ruang-lingkup",
-          },
-          {
-            name: "4.4 Sistem Manajemen Mutu",
+            name: "Sistem Manajemen Mutu",
             path: "/iso/klausul-4/sistem-manajemen-mutu",
           },
         ],
